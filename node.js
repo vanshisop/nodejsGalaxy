@@ -2,10 +2,14 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const pool = require('./db');
 const { user } = require('pg/lib/defaults');
 const app = express();
 const port = 3001;
+const { Pool } = require('pg');
+
+const pool = new Pool({
+  connectionString: 'postgres://postgres.wewkjwtalqhjugzwrcql:_CPGJypV9RU$Nq-@aws-0-us-west-1.pooler.supabase.com:6543/postgres',
+});     
 
 app.use(cors());
 app.use(bodyParser.json());
