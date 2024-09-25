@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const { user } = require('pg/lib/defaults');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 const { Pool } = require('pg');
 
 const pool = new Pool({
