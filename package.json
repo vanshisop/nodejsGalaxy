@@ -2,7 +2,7 @@
   "name": "number-guessing-game",
   "version": "1.0.0",
   "description": "A simple number guessing game with PostgreSQL backend",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
