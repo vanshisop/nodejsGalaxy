@@ -87,7 +87,7 @@ app.post('/update-scores',async (req, res) => {
 });
 app.post('/handle-leaderboard',async (req, res) => {
     
-    const query = 'SELECT full_name, best_score FROM users WHERE best_score > 0 ORDER BY best_score DESC LIMIT 5';  // Add LIMIT 5
+    const query = 'SELECT full_name, best_score FROM users WHERE best_score > 0 ORDER BY best_score LIMIT 5';  // Add LIMIT 5
 
     try {
         const response = await pool.query(query);
